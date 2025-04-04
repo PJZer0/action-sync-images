@@ -35,7 +35,6 @@ jobs:
         #!/usr/bin/env bash
         skopeo copy --all docker://quay.io/prometheus/alertmanager docker://pjzer0/monitoring-alertmanager
         skopeo copy --all docker://quay.io/prometheus/blackbox-exporter docker://pjzer0/monitoring-blackbox-exporter
-        skopeo copy --all docker://ghcr.io/jimmidyson/configmap-reload docker://pjzer0/monitoring-configmap-reload
         skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
         skopeo copy --all docker://grafana/grafana docker://pjzer0/monitoring-grafana
         skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics docker://pjzer0/monitoring-kube-state-metrics
