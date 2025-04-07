@@ -33,18 +33,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://quay.io/prometheus/alertmanager docker://pjzer0/monitoring-alertmanager
-        skopeo copy --all docker://quay.io/prometheus/blackbox-exporter docker://pjzer0/monitoring-blackbox-exporter
-        skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
-        skopeo copy --all docker://grafana/grafana docker://pjzer0/monitoring-grafana
-        skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics docker://pjzer0/monitoring-kube-state-metrics
-        skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
-        skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
-        skopeo copy --all docker://quay.io/prometheus/node-exporter docker://pjzer0/monitoring-node-exporter
-        skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
-        skopeo copy --all docker://quay.io/prometheus/prometheus docker://pjzer0/monitoring-prometheus
-        skopeo copy --all docker://registry.k8s.io/prometheus-adapter/prometheus-adapter docker://pjzer0/monitoring-prometheus-adapter
-        skopeo copy --all docker://quay.io/prometheus-operator/prometheus-operator docker://pjzer0/monitoring-prometheus-operator
-        skopeo copy --all docker://quay.io/brancz/kube-rbac-proxy docker://pjzer0/monitoring-kube-rbac-proxy
-
- 
+        skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0 docker://pjzer0/monitor-kube-state-metrics:v2.15.0
