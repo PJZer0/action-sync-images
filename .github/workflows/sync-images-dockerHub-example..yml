@@ -34,5 +34,5 @@ jobs:
       run: |
         #!/usr/bin/env bash
         skopeo copy --all docker://registry.k8s.io/ingress-nginx/controller:v1.12.1 docker://pjzer0/ingress-nginx-controller:v1.12.1
-        skopeo copy --all docker://registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.5.2 docker://pjzer0/ingress-nginx-kube-webhook-certgen:v1.5.2
+        skopeo copy --all docker://ghcr.io/ldapaccountmanager/lam:stable docker://pjzer0/ldapaccountmanager-lam:stable
     
