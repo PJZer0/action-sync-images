@@ -33,7 +33,6 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://quay.io/external_storage/rbd-provisioner:v2.1.1-k8s1.11 docker://pjzer0/rbd-provisioner:v2.1.1-k8s1.11
         skopeo copy --all docker://docker.io/rancher/local-path-provisioner:v0.0.24 docker://pjzer0/local-path-provisioner:v0.0.24
         skopeo copy --all docker://registry.k8s.io/ingress-nginx/controller:v1.12.0 docker://pjzer0/controller:v1.12.0
         skopeo copy --all docker://docker.io/amazon/aws-alb-ingress-controller:v1.1.9 docker://pjzer0/aws-alb-ingress-controller:v1.1.9
@@ -57,4 +56,5 @@ jobs:
         skopeo copy --all docker://registry.k8s.io/kube-scheduler:v1.31.4 docker://pjzer0/kube-scheduler:v1.31.4
         skopeo copy --all docker://registry.k8s.io/kube-proxy:v1.31.4 docker://pjzer0/kube-proxy:v1.31.4
         skopeo copy --all docker://quay.io/external_storage/cephfs-provisioner:v2.1.0-k8s1.11 docker://pjzer0/cephfs-provisioner:v2.1.0-k8s1.11
+        skopeo copy --all docker://quay.io/external_storage/rbd-provisioner:v2.1.1-k8s1.11 docker://pjzer0/rbd-provisioner:v2.1.1-k8s1.11
     
