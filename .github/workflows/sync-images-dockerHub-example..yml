@@ -33,28 +33,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/rancher/local-path-provisioner:v0.0.24 docker://pjzer0/local-path-provisioner:v0.0.24
-        skopeo copy --all docker://registry.k8s.io/ingress-nginx/controller:v1.12.0 docker://pjzer0/controller:v1.12.0
-        skopeo copy --all docker://docker.io/amazon/aws-alb-ingress-controller:v1.1.9 docker://pjzer0/aws-alb-ingress-controller:v1.1.9
-        skopeo copy --all docker://quay.io/jetstack/cert-manager-controller:v1.15.3 docker://pjzer0/cert-manager-controller:v1.15.3
-        skopeo copy --all docker://quay.io/jetstack/cert-manager-cainjector:v1.15.3 docker://pjzer0/cert-manager-cainjector:v1.15.3
-        skopeo copy --all docker://quay.io/jetstack/cert-manager-webhook:v1.15.3 docker://pjzer0/cert-manager-webhook:v1.15.3
-        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-attacher:v3.3.0 docker://pjzer0/csi-attacher:v3.3.0
-        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-provisioner:v3.0.0 docker://pjzer0/csi-provisioner:v3.0.0
-        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-snapshotter:v5.0.0 docker://pjzer0/csi-snapshotter:v5.0.0
-        skopeo copy --all docker://registry.k8s.io/sig-storage/snapshot-controller:v7.0.2 docker://pjzer0/snapshot-controller:v7.0.2
-        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-resizer:v1.3.0 docker://pjzer0/csi-resizer:v1.3.0
-        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.4.0 docker://pjzer0/csi-node-driver-registrar:v2.4.0
-        skopeo copy --all docker://registry.k8s.io/provider-os/cinder-csi-plugin:v1.30.0 docker://pjzer0/cinder-csi-plugin:v1.30.0
-        skopeo copy --all docker://docker.io/amazon/aws-ebs-csi-driver:v0.5.0 docker://pjzer0/aws-ebs-csi-driver:v0.5.0
-        skopeo copy --all docker://docker.io/kubernetesui/dashboard:v2.7.0 docker://pjzer0/dashboard:v2.7.0
-        skopeo copy --all docker://docker.io/kubernetesui/metrics-scraper:v1.0.8 docker://pjzer0/metrics-scraper:v1.0.8
-        skopeo copy --all docker://quay.io/metallb/speaker:v0.13.9 docker://pjzer0/speaker:v0.13.9
-        skopeo copy --all docker://quay.io/metallb/controller:v0.13.9 docker://pjzer0/controller:v0.13.9
-        skopeo copy --all docker://registry.k8s.io/kube-apiserver:v1.31.4 docker://pjzer0/kube-apiserver:v1.31.4
-        skopeo copy --all docker://registry.k8s.io/kube-controller-manager:v1.31.4 docker://pjzer0/kube-controller-manager:v1.31.4
-        skopeo copy --all docker://registry.k8s.io/kube-scheduler:v1.31.4 docker://pjzer0/kube-scheduler:v1.31.4
-        skopeo copy --all docker://registry.k8s.io/kube-proxy:v1.31.4 docker://pjzer0/kube-proxy:v1.31.4
-        skopeo copy --all docker://quay.io/external_storage/cephfs-provisioner:v2.1.0-k8s1.11 docker://pjzer0/cephfs-provisioner:v2.1.0-k8s1.11
-        skopeo copy --all docker://quay.io/external_storage/rbd-provisioner:v2.1.1-k8s1.11 docker://pjzer0/rbd-provisioner:v2.1.1-k8s1.11
+        skopeo copy --all docker://ghcr.io/dexidp/dex:v2.41.1 docker://pjzer0/dexidp-dex:v2.41.1
     
