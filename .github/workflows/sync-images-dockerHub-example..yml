@@ -33,5 +33,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://hwdsl2/ipsec-vpn-server docker://pjzer0/ipsec-vpn-server
+        skopeo copy --all docker://node:20-bookworm-slim docker://pjzer0/node:20-bookworm-slim
     
