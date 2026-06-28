@@ -33,5 +33,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://node:20-bookworm-slim docker://pjzer0/node:20-bookworm-slim
+        skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.19.1 docker://pjzer0/kube-state-metrics:v2.19.1
     
